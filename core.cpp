@@ -76,7 +76,7 @@ QString connection::getConnectionString()
     }
     for (int i = 0; i < tunnels.size(); ++i)
     {
-        tmp = tmp + " -L" + QString::number((tunnels.operator [](i)).getPort()) + ":" + (tunnels.operator [](i)).getHostname() + ":" + QString::number((tunnels.operator [](i)).getToPort());
+        tmp = tmp + " -L0.0.0.0:" + QString::number((tunnels.operator [](i)).getPort()) + ":" + (tunnels.operator [](i)).getHostname() + ":" + QString::number((tunnels.operator [](i)).getToPort());
     }
 
     return(tmp);
